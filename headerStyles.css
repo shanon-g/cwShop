@@ -1,0 +1,258 @@
+/*======================= OVERALL ======================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: normal;
+  letter-spacing: 0.05em;
+  background-color: #F8F7F3;
+}
+
+
+/*======================= SCROLL TO TOP ======================= */
+
+#scrollToTopBtn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  z-index: 999;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; /* Smooth fade-in */
+}
+
+#scrollToTopBtn.show {
+  display: block;
+  opacity: 0.8;
+}
+
+#scrollToTopBtn img {
+  width: 50px;
+  height: 50px;
+  transition: opacity 0.3s ease;
+}
+
+#scrollToTopBtn:hover img {
+  opacity: 0.8;
+}
+
+
+/*======================= HEADER ======================= */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  background-color: #14202E;
+  border-bottom: 1px solid #B3A684;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  opacity: 0.8;
+}
+
+header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.logo img {
+  width: 90px;
+  margin: -10px 0 -10px;
+}
+
+.page-bar {
+  display: flex;
+  flex-direction: column; /* Stack vertically */
+  align-items: center; /* Center align horizontally */
+  padding-left: 30px;
+}
+
+.page-bar h1 {
+  font-size: 42px;
+  font-family: 'IM FELL Double Pica', serif;
+  color: #B3A684;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 140px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #B3A684;
+  font-weight: normal;
+  font-size: 15px;
+  transition: border-bottom 0.3s ease;
+}
+
+nav a:hover {
+  border-bottom: 1px solid #B3A684;
+  font-weight: bold;
+}
+
+.icons img {
+  width: 25px;
+  margin-left: 15px;
+  cursor: pointer;
+}
+
+.icons img:hover {
+  opacity: 0.8;
+}
+
+/* ========== FOOTER ========== */
+.footer {
+  background-color: #14202E;
+  color: #B3A684;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 40px 80px;
+  text-align: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.footer-section h4 {
+  font-family: 'IM FELL Double Pica', serif;
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-section p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.footer-icons img {
+  width: 30px;
+  filter: brightness(90%);
+}
+
+.footer-divider {
+  margin: 30px auto 10px;
+  border: none;
+  height: 1px;
+  background-color: #B3A684;
+  width: 90%;
+}
+
+.footer-bottom {
+  font-size: 14px;
+  color: #B3A684;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 20px;
+  }
+
+  /* LOGO + TITLE + ICONS ROW */
+  .header-top {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .logo img {
+    width: 50px;
+  }
+
+  .page-bar {
+    display: flex; /* <-- make it a flex container */
+    flex-direction: row;
+    justify-content: space-between; /* <-- push h1 to left, nav to right */
+    align-items: center;
+    width: 100%;
+    padding: 0 2px;
+  }
+
+
+  .page-bar h1 {
+    font-size: 20px;
+  }
+
+  nav ul {
+    flex-direction: row;
+    gap: 20px;
+    padding: 0;
+    text-align: center;
+  }
+
+  nav a {
+    font-size: 14px;
+  }
+
+  .icons {
+    display: flex;
+    gap: 10px;
+  }
+
+  .icons img {
+    width: 20px;
+    margin: 0;
+  }
+
+  /* FOOTER */
+  .footer {
+    padding: 20px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .footer-section h4 {
+    font-size: 14px;
+  }
+
+  .footer-section p,
+  .footer-bottom {
+    font-size: 12px;
+  }
+
+  .footer-icons img {
+    width: 24px;
+  }
+}

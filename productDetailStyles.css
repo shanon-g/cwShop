@@ -1,0 +1,217 @@
+/* ======= GLOBAL ======= */
+body {
+    margin: 0;
+    background-color: #F8F7F3;
+    font-family: 'Josefin Sans', sans-serif;
+    color: #14202E;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* ======= PRODUCT DETAIL SECTION ======= */
+.product-detail {
+    max-width: 1100px;
+    margin: 140px auto 30px;
+    display: flex;
+    gap: 60px;
+    box-sizing: border-box;
+    align-items: flex-start;
+}
+
+.product-detail #product-img {
+    width: 540px;
+    height: 540px;
+    background-color: #E2D1A5;
+    box-shadow: 8px 8px 10px rgb(0 0 0 / 0.15);
+    object-fit: cover;
+    border-radius: 2px;
+    user-select: none;
+    flex-shrink: 0;
+}
+
+.product-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    max-width: 400px;
+}
+
+#product-name {
+    font-family: 'IM FELL Double Pica', serif;
+    font-weight: 700;
+    font-size: 32px;
+    color: #14202E;
+    margin: 0;
+    margin-top: 80px;
+    user-select: none;
+}
+
+#product-description {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #1E3957;
+    margin: 0;
+    user-select: none;
+}
+
+#product-price {
+    font-family: 'IM FELL Double Pica', serif;
+    font-weight: 700;
+    font-size: 28px;
+    color: #14202E;
+    margin: 0;
+    margin-top: 60px;
+    user-select: none;
+}
+
+.qty-selector {
+    margin: 15px 0 25px 0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.qty-button {
+    background-color: #14202E;
+    color: #B3A684;
+    font-family: 'IM FELL Double Pica', serif;
+    font-size: 18px;
+    font-weight: 600;
+    border: none;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    user-select: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 3px 3px 4px rgb(0 0 0 / 0.15);
+    border-radius: 1px;
+    transition: background-color 0.3s ease;
+}
+
+.qty-button:hover {
+    background-color: #1E3957;
+}
+
+.qty-input {
+    width: 40px;
+    height: 28px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    border: 1px solid #14202E;
+    border-radius: 1px;
+    outline: none;
+    user-select: text;
+    color: #14202E;
+}
+
+.product-buttons {
+    display: flex;
+    gap: 20px;
+}
+
+.product-buttons button {
+    background-color: #14202E;
+    color: #B3A684;
+    border: none;
+    font-family: 'IM FELL Double Pica', serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 14px 32px;
+    cursor: pointer;
+    user-select: none;
+    letter-spacing: 0.05em;
+    box-shadow: 4px 4px 6px rgb(0 0 0 / 0.15);
+    transition: background-color 0.3s ease;
+    border-radius: 2px;
+    text-transform: uppercase;
+}
+
+.product-buttons button:hover {
+    background-color: #1E3957;
+}
+
+
+@media screen and (max-width: 768px) {
+  .product-detail {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0 20px;
+    margin-top: 150px;
+  }
+
+  .product-detail #product-img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+
+  .product-text {
+    max-width: 100%;
+    text-align: center;
+    align-items: center;
+  }
+
+  #product-name {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+
+  #product-description {
+    font-size: 14px;
+    padding: 0 10px;
+  }
+
+  #product-price {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  .qty-selector {
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .qty-input {
+    width: 36px;
+    font-size: 14px;
+  }
+
+  .qty-button {
+    width: 26px;
+    height: 26px;
+    font-size: 16px;
+  }
+
+  .product-buttons {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    align-items: center;
+  }
+
+  .product-buttons button {
+    width: 80%;
+    font-size: 14px;
+    padding: 12px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #product-name {
+    font-size: 22px;
+  }
+
+  #product-price {
+    font-size: 20px;
+  }
+
+  .product-buttons button {
+    width: 100%;
+  }
+}

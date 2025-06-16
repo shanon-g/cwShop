@@ -1,0 +1,302 @@
+/*======================= BANNER ======================= */
+.top-banner {
+  position: relative;
+  max-width: 1200px;
+  margin: 150px auto 20px;
+  box-shadow: 4px 4px 7px rgba(20, 32, 46, 0.3);
+  border: 1px solid #14202E;
+}
+
+.top-banner img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+.banner-text {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #1E3957;
+  color: #E2D1A5;
+  font-family: 'IM Fell Double Pica', serif;
+  font-weight: 600;
+  font-size: 14px;
+  text-align: center;
+  padding: 10px 0;
+  user-select: none;
+  letter-spacing: 0.04em;
+}
+
+/*======================= FORM ======================= */
+main {
+  flex: 1;
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 80px;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 6px 6px 10px rgba(20, 32, 46, 0.3);
+  border: 1px solid #14202E;
+  box-sizing: border-box;
+}
+
+main h2 {
+  font-family: 'IM Fell Double Pica', serif;
+  font-weight: bold;
+  font-size: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-decoration: underline;
+  color: #14202E;
+}
+
+form {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto auto;
+  grid-gap: 20px 40px;
+  align-items: center;
+}
+
+label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #14202E;
+  margin-bottom: -16px;
+  display: block;
+}
+
+input[type="text"],
+input[type="email"] {
+  grid-column: span 4;
+  padding: 8px 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.birth-date-selectors {
+  grid-column: span 4;
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.birth-date-selectors select {
+  flex: 1;
+  max-width: 120px;
+}
+
+.birth-date-selectors select#birth-day {
+  max-width: 60px;
+}
+
+.birth-date-selectors select#birth-year {
+  max-width: 100px;
+}
+
+
+.gender-group {
+  grid-column: span 4;
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  font-size: 14px;
+}
+
+.gender-group label {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.photo-group-container {
+  padding-left: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 5%;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.photo-group {
+  max-width: 262px;
+  width: 100%;
+
+  text-align: center;
+  box-shadow: 4px 4px 7px rgba(20, 32, 46, 0.3);
+  border: 1px solid #14202E;
+  background-color: white;
+  font-size: 13px;
+  font-weight: bold;
+  color: #14202E;
+  user-select: none;
+
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+}
+
+.photo-group p {
+  margin: 10px;
+}
+
+.photo-group img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}
+
+.photo-group input[type="file"] {
+  cursor: pointer;
+  padding: 6px 14px;
+  background-color: #1E3957;
+  color: #E2D1A5;
+  border: none;
+  font-weight: normal;
+  font-family: 'IM Fell Double Pica', serif;
+  user-select: none;
+}
+
+.terms-group {
+  grid-column: span 4;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+/* Fix vertical alignment */
+.terms-group input[type="checkbox"] {
+  vertical-align: middle;
+  margin: 15px 0 0 0;
+  width: 16px;
+  height: 16px;
+}
+
+
+
+button[type="submit"] {
+  grid-column: 1 / -1;
+  justify-self: center;
+  margin-top: 30px;
+  background-color: #1E3957;
+  color: #E2D1A5;
+  font-family: 'IM Fell Double Pica', serif;
+  font-weight: 600;
+  font-size: 18px;
+  padding: 14px 50px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 4px 4px 7px rgba(20, 32, 46, 0.4);
+  user-select: none;
+  transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #14202E;
+}
+
+@media (max-width: 768px) {
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #14202E;
+    border-radius: 2px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .birth-date-selectors {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .birth-date-selectors select {
+    flex: 1;
+    min-width: 100px;
+  }
+
+  .gender-group {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .photo-group-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    width: 100%;
+  }
+
+  .photo-group {
+    width: 100%;
+    max-width: 320px;
+    text-align: center;
+  }
+
+  .photo-group img {
+    width: 100%;
+    height: auto;
+    max-height: 280px;
+    object-fit: cover;
+    border: 1px solid #14202E;
+  }
+
+  .photo-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #1E3957;
+    color: #E2D1A5;
+    font-family: 'IM Fell Double Pica', serif;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+
+  .terms-group {
+    padding-top: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+  }
+
+  button[type="submit"] {
+    width: 100%;
+    padding: 14px 0;
+    font-size: 16px;
+    font-family: 'IM Fell Double Pica', serif;
+    background-color: #14202E;
+    color: #E2D1A5;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  button[type="submit"]:hover {
+    background-color: #1E3957;
+  }
+}
+

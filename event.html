@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Christian Wijaya - Event Registration</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="headerStyles.css" />
+    <link rel="stylesheet" href="eventStyles.css" />
+</head>
+
+<body>
+  <!-- HEADER -->
+    <header>
+    <div class="logo">
+        <img src="assets/logo_500.png" alt="Logo" />
+    </div>
+
+    <div class="page-bar">
+        <h1>CHRISTIAN WIJAYA</h1>
+        <nav>
+            <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="event.html">Event</a></li>
+            <li><a href="about.html">About Us</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="icons">
+        <img src="assets/cart_icon_64.png" alt="Cart">
+        <img src="assets/search_icon_100.png" alt="Search">
+        <img src="assets/user_icon_96.png" alt="User">
+    </div>
+    </header>
+
+  <!-- TOP BANNER -->
+    <section class="top-banner">
+        <img src="assets/event_banner.jpg" alt="New Generation Model Banner" />
+        <div class="banner-text">
+        JOIN US AS CHRISTIAN WIJAYA’S NEW GENERATION MODEL
+        </div>
+    </section>
+
+    <main>
+        <h2>REGISTRATION FORM</h2>
+
+        <form action="#" method="POST" enctype="multipart/form-data" id="registration-form" novalidate>
+            <label for="full-name">Full Name:</label>
+            <input type="text" id="full-name" name="fullName" required placeholder="Enter your full name" />
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required placeholder="Enter your email address" />
+            
+            <label>Birth Date:</label>
+            <div class="birth-date-selectors">
+                <select name="birth-day" id="birth-day" required>
+                    <option value="" disabled selected>Day</option>
+                </select>
+                <select name="birth-month" id="birth-month" required>
+                    <option value="" disabled selected>Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                <select name="birth-year" id="birth-year" required>
+                    <option value="" disabled selected>Year</option>
+                </select>
+            </div>
+            
+            <label>Gender:</label>
+            <div class="gender-group">
+                <label><input type="radio" id="gender-male" name="gender" value="male" /> Male</label>
+                <label><input type="radio" id="gender-female" name="gender" value="female" required /> Female</label>
+            </div>
+
+
+            <div class="photo-group-container">
+                <div class="photo-group">
+                    <p>Input Close-up Face Image</p>
+                    <img id="face-preview" src="assets/placeholder_face.png" alt="Face Preview" />
+                    <input type="file" id="face-image" accept="image/*" />
+                  </div>
+                  
+                <div class="photo-group">
+                    <p>Input Full Body Image</p>
+                    <img id="body-preview" src="assets/placeholder_body.png" alt="Body Preview" />
+                    <input type="file" id="body-image" accept="image/*" />
+                </div>
+            </div>
+              
+
+            <div class="terms-group">
+                <input type="checkbox" id="terms" name="terms" required />
+                <label for="terms">I agree to the Terms and Condition</label>
+            </div>
+
+            <button type="submit">REGISTER</button>
+        </form>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+            <h4>SOCIAL MEDIA</h4>
+            <div class="footer-icons">
+                <a href="https://www.youtube.com/@shn.mp4" target="_blank" rel="noopener noreferrer">
+                <img src="assets/youtube.png" alt="YouTube" />
+                </a>
+                <a href="https://x.com/shannn_tw9" target="_blank" rel="noopener noreferrer">
+                <img src="assets/x.png" alt="X (Twitter)" />
+                </a>
+                <a href="https://www.instagram.com/shanon_g.i/" target="_blank" rel="noopener noreferrer">
+                <img src="assets/instagram.png" alt="Instagram" />
+                </a>
+                <a href="https://www.tiktok.com/@twice_tiktok_official" target="_blank" rel="noopener noreferrer">
+                <img src="assets/tiktok.png" alt="TikTok" />
+                </a>
+            </div>
+            </div>
+            <div class="footer-section">
+            <h4>CONTACT US</h4>
+            <p>+62 812 8824 6969</p>
+            <p>shanon.istanto@binus.ac.id</p>
+            </div>
+        </div>
+        <hr class="footer-divider" />
+        <p class="footer-bottom">&copy; 2025 CHRISTIAN WIJAYA</p>
+    </footer>
+
+    <script src="eventScript.js"></script>
+    <script src="headerScript.js"></script>
+</body>
+
+</html>

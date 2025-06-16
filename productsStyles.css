@@ -1,0 +1,248 @@
+body {
+  background-color: #F8F7F3;
+}
+  
+/* ========== VIDEO TRAILER ========== */
+.video-trailer {
+  padding-top: 150px;
+  text-align: center;
+}
+
+.video-trailer h2 {
+  font-family: 'IM FELL Double Pica', serif;
+  font-size: 28px;
+  color: #14202E;
+  margin-bottom: 20px;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+}
+
+.divider-line {
+  border: 0;
+  height: 3px;
+  width: 90%;
+  background-color: #14202E;
+  display: block;
+  margin: 60px auto; /*top, right, bottom, left*/
+}
+
+.video-trailer h1 {
+  font-family: 'IM FELL Double Pica', serif;
+  font-size: 54px;
+  color: #14202E;
+  margin: 0px auto -100px; /*top, right, bottom, left*/
+}
+
+/* ========== PRODUCTS ========== */
+.product-page {
+  display: flex;
+  max-width: 1200px;
+  align-items: flex-start;
+}
+  
+/* ========== FILTER BOX ========== */
+.filter-box {
+  width: 220px;
+  background-color: #1E3957;
+  color: #E2D1A5;
+  font-family: 'Josefin Sans', sans-serif;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.2);
+  position: sticky;
+  top: 200px;
+  height: fit-content;
+}
+
+.filter-box h3 {
+  font-family: 'IM FELL Double Pica', serif;
+  font-weight: normal;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-header {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  border-top: 1px solid #B3A684;
+  padding-top: 10px;
+}
+
+.filter-options {
+  margin-top: 10px;
+  display: none;
+  background-color: #F8F7F3;
+  padding: 10px;
+  border-radius: 4px;
+}
+
+.filter-options label {
+  display: block;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #14202E;
+  font-size: 14px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.filter-options label:hover {
+  text-decoration: underline;
+}
+  
+  
+/* ========== GRID ========== */
+/* === Layout container === */
+.product-page {
+  display: flex;
+  max-width: 1200px;
+  margin: 160px auto 100px;
+  padding: 0 20px;
+  gap: 60px;
+  align-items: flex-start;
+}
+
+/* === Product grid === */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  flex: 1;
+}
+  
+/* === Product card === */
+.product-card {
+  background-color: #E2D1A5;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.15);
+  text-align: left;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #14202E;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;          /* for absolute positioned tags */
+  padding-bottom: 40px;
+  cursor: pointer;             /* pointer on hover */
+}
+
+.product-card:hover {
+  transform: scale(1.05);
+  box-shadow: 8px 8px 20px rgba(20, 32, 46, 0.3);
+  z-index: 10;                 /* make sure it overlaps neighbors */
+}
+
+.product-card img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.product-card h4 {
+  font-weight: bold;
+  font-size: 16px;
+  margin: 12px 12px 8px;
+}
+
+.product-card p {
+  font-size: 13px;
+  margin: 6px 12px;
+}
+
+
+.tags {
+  position: absolute;
+  bottom: 12px;
+  left: 10px;
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* === Individual tags styling === */
+.tag {
+  background-color: #B3A684;   /* light warm color from palette */
+  color: #14202E;              /* dark text */
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 700;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  user-select: none;
+  box-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+  white-space: nowrap;
+}
+
+/* Optional: category and type tag distinct colors (if you want) */
+.category-tag {
+  background-color: #1E3957;  /* navy blue */
+  color: #E2D1A5;             /* light beige */
+}
+
+.type-tag {
+  background-color: #14202E;  /* very dark blue */
+  color: #F8F7F3;             /* very light */
+}
+  
+@media screen and (max-width: 768px) {
+  /* STACK FILTER + PRODUCTS VERTICALLY */
+  .product-page {
+    flex-direction: column;
+    gap: 30px;
+    padding: 0 16px;
+  }
+
+  /* FILTER BOX: narrower and centered */
+  .filter-box {
+    width: 100%;
+    padding: 16px;
+    position: static; /* remove sticky */
+    top: unset;
+  }
+
+  /* PRODUCT GRID: 2 columns */
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  /* PRODUCT CARD IMAGE HEIGHT REDUCED */
+  .product-card img {
+    height: 250px;
+  }
+
+  /* VIDEO TRAILER RESPONSIVE */
+  .video-container iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  /* VIDEO TITLE AND PRODUCTS HEADING */
+  .video-trailer h1 {
+    font-size: 36px;
+    margin-bottom: -60px;
+  }
+
+  .video-trailer h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img {
+    height: 200px;
+  }
+}

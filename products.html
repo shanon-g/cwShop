@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Christian Wijaya - Products</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="headerStyles.css" />
+  <link rel="stylesheet" href="productsStyles.css" />
+</head>
+
+<body>
+  
+  <!-- SCROLL TO TOP -->
+  <button id="scrollToTopBtn" title="Scroll to Top">
+    <img src="assets/top_67.png" alt="Scroll to Top" />
+  </button>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="assets/logo_500.png" alt="Logo" />
+    </div>
+
+    <div class="page-bar">
+      <h1>CHRISTIAN WIJAYA</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="event.html">Event</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="icons">
+      <img src="assets/cart_icon_64.png" alt="Cart" />
+      <img src="assets/search_icon_100.png" alt="Search" />
+      <img src="assets/user_icon_96.png" alt="User" />
+    </div>
+  </header>
+
+  <!-- VIDEO TRAILER -->
+  <section class="video-trailer">
+    <h2>2025 PURPLE LABEL TRAILER</h2>
+    <div class="video-container">
+      <iframe width="840" height="472" src="https://www.youtube.com/embed/oA3mA-rsKWo" title="YouTube video player"
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <hr class="divider-line">
+
+    <h1>PRODUCTS</h1>
+  </section>
+
+  <!-- PRODUCTS SECTION -->
+  <section class="product-page">
+
+    <!-- FILTER BY BOX -->
+    <aside class="filter-box">
+      <h3>FILTER BY</h3>
+
+      <div class="filter-group">
+        <div class="filter-header" onclick="toggleFilter('category')">
+          <span>Category</span>
+          <span id="toggle-category">+</span>
+        </div>
+        <div class="filter-options" id="category-options">
+          <label><input type="checkbox" class="filter-checkbox" value="tops" /> Tops</label>
+          <label><input type="checkbox" class="filter-checkbox" value="bottoms" /> Bottoms</label>
+          <label><input type="checkbox" class="filter-checkbox" value="bags" /> Bags</label>
+        </div>
+      </div>
+
+      <div class="filter-group">
+        <div class="filter-header" onclick="toggleFilter('type')">
+          <span>Type</span>
+          <span id="toggle-type">+</span>
+        </div>
+        <div class="filter-options" id="type-options">
+          <label><input type="checkbox" class="filter-checkbox" value="formal" /> Formal</label>
+          <label><input type="checkbox" class="filter-checkbox" value="casual" /> Casual</label>
+          <label><input type="checkbox" class="filter-checkbox" value="luxury" /> Luxury</label>
+        </div>
+      </div>
+    </aside>
+
+    <!-- PRODUCT GRID -->
+    <div class="product-grid" id="product-grid"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>SOCIAL MEDIA</h4>
+        <div class="footer-icons">
+          <a href="https://www.youtube.com/@shn.mp4" target="_blank" rel="noopener noreferrer">
+            <img src="assets/youtube.png" alt="YouTube" />
+          </a>
+          <a href="https://x.com/shannn_tw9" target="_blank" rel="noopener noreferrer">
+            <img src="assets/x.png" alt="X (Twitter)" />
+          </a>
+          <a href="https://www.instagram.com/shanon_g.i/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/instagram.png" alt="Instagram" />
+          </a>
+          <a href="https://www.tiktok.com/@twice_tiktok_official" target="_blank" rel="noopener noreferrer">
+            <img src="assets/tiktok.png" alt="TikTok" />
+          </a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h4>CONTACT US</h4>
+        <p>+62 812 8824 6969</p>
+        <p>shanon.istanto@binus.ac.id</p>
+      </div>
+    </div>
+    <hr class="footer-divider" />
+    <p class="footer-bottom">&copy; 2025 CHRISTIAN WIJAYA</p>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script src="headerScript.js"></script>
+  <script src="productsScript.js"></script>
+</body>
+
+</html>
